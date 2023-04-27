@@ -1,4 +1,4 @@
-# Ansible_Kubernetes_Deploy
+# Ansible_Kubernetes_Deploy  / Ubuntu 22
 Deploy Kube with Ansible (using flannel)
 
 1. ansible-playbook -i hosts users.yml
