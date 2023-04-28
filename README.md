@@ -1,5 +1,5 @@
 # Ansible_Kubernetes_Deploy  / Ubuntu 22
-Deploy Kube with Ansible (using flannel)
+Deploy Kube with Ansible
 
 Steps Taken (Playground):
 
