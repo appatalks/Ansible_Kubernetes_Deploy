@@ -21,3 +21,4 @@ Steps Taken (Playground):
 
 
 Ref: https://buildvirtual.net/deploy-a-kubernetes-cluster-using-ansible/
+Ref: https://www.linuxtechi.com/install-kubernetes-on-ubuntu-22-04/
