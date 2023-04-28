@@ -7,13 +7,15 @@ Steps Taken (Playground):
 2. ansible-playbook -i hosts install-k8s.yml
 3. ansible-playbook -i hosts master.yml (debug piece needs some fixin for join part.)
 4. ansible-playbook -i hosts join-workers.yml
-5. https://github.com/kubernetes-sigs/metrics-server
+5. Troubleshooting - 
+5a. https://github.com/kubernetes-sigs/metrics-server
    <br> -- kubectl patch deployment metrics-server -n kube-system --type 'json' -p '[{"op": "add", "path": "/spec/template/spec/containers/0/args/-", "value": "--kubelet-insecure-tls"}]'
    <br> -- kubectl delete -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
    <br> -- sudo snap install helm --classic
    <br> -- helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server/
    <br> -- helm upgrade --install metrics-server metrics-server/metrics-server
    <br> -- kubectl patch deployment metrics-server -n default --type 'json' -p '[{"op": "add", "path": "/spec/template/spec/containers/0/args/-", "value": "--kubelet-insecure-tls"}]'
+   <br> -- kubectl patch nodes lab-virtualbox --patch '{"spec": {"podCIDR":"192.168.86.0/16"}}'
 6. https://github.com/kubernetes/dashboard
 7. https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs (apiVersion: batch/v1beta1)
 
