@@ -1,6 +1,8 @@
 # Ansible_Kubernetes_Deploy  / Ubuntu 22
 Deploy Kube with Ansible (using flannel)
 
+Steps Taken (Playground):
+
 1. ansible-playbook -i hosts users.yml
 2. ansible-playbook -i hosts install-k8s.yml
 3. ansible-playbook -i hosts master.yml (debug piece needs some fixin for join part.)
@@ -11,6 +13,7 @@ Deploy Kube with Ansible (using flannel)
    <br> -- sudo snap install helm --classic
    <br> -- helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server/
    <br> -- helm upgrade --install metrics-server metrics-server/metrics-server
+   <br> -- kubectl patch deployment metrics-server -n default --type 'json' -p '[{"op": "add", "path": "/spec/template/spec/containers/0/args/-", "value": "--kubelet-insecure-tls"}]'
 6. https://github.com/kubernetes/dashboard
 7. https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs (apiVersion: batch/v1beta1)
 
