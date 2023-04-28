@@ -16,7 +16,7 @@ Steps Taken (Playground):
    <br> -- helm upgrade --install metrics-server metrics-server/metrics-server
    <br> -- kubectl patch deployment metrics-server -n default --type 'json' -p '[{"op": "add", "path": "/spec/template/spec/containers/0/args/-", "value": "--kubelet-insecure-tls"}]'
    <br> -- kubectl patch nodes lab-virtualbox --patch '{"spec": {"podCIDR":"192.168.86.0/16"}}'
-6. https://github.com/kubernetes/dashboard
+6. https://github.com/kubernetes/dashboard <br>
 7. https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs (apiVersion: batch/v1beta1)
 
 
